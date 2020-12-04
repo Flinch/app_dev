@@ -1,19 +1,22 @@
-<%= render 'errors' %>
-
 <%= form_with(model: @article, local: true) do |f| %>
-<p> 
-	<%= f.label :title %><br/>
-	<%= f.text_field :title %>
-</p>
+<%= render 'pages/shared/errors' %>
+<div class = "container p-3 mb-2 bg-info text-white col-8 shadow" id ="form-container">
+	<div class = "form group text-center ">
+		<p> 
+			<%= f.text_field :title, class: "form-control shadow" %>
+		</p>
 
-<p>
-	<%=f.label :description%> <br/>
-	<%=f.text_area :description%>
-</p>
+		<p>
+			<%=f.text_area :description, rows:8, class: "form-control shadow" %>
+		</p>
 
-<p>
-	<%=f.submit %>
-</p>
+		<p>
+			<%=f.submit class:"btn btn-light btn-lg" %>
+		</p>
 
 
-<% end %>
+		<% end %>
+	</div>
+</div>
+
+<p style = "text-align: center"><%=link_to 'Canel and Return Home', articles_path, class: "text-info"%></p>
