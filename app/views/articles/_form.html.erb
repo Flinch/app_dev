@@ -1,5 +1,5 @@
 <%= form_with(model: @article, local: true) do |f| %>
-<%= render 'pages/shared/errors' %>
+<%= render 'pages/shared/errors', obj: @article %>
 <div class = "container p-3 mb-2 bg-secondary text-white col-8 shadow" id ="form-container">
 	<div class = "form group text-center ">
 		<p> 
