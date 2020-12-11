@@ -1,4 +1,6 @@
 class UsersController < ApplicationController
+	before_action :set_user, only: [:edit, :update, :show]
+
 	def new
 		@user = User.new
 	end
@@ -12,6 +14,22 @@ class UsersController < ApplicationController
 			render "new"
 		end
 	end 
+
+	def edit
+	end
+
+	def update
+		if @user.update(user_param)
+			flash[:notice] = "Your changes were saved"
+			redirect_to articles_path
+		else
+			render "edit"
+		end
+	end
+
+	def show
+		
+	end
 
 	private
 
