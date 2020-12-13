@@ -1,0 +1,22 @@
+<%= form_with(model: @user, local: true) do |f| %>
+<%= render 'pages/shared/errors', obj: @user %>
+<div class = "container p-3 mb-2 bg-secondary text-white col-8 shadow" id ="form-container">
+	<div class = "form group text-center ">
+		<p> 
+			<%= f.text_field :username, class: "form-control shadow", placeholder: "Username" %>
+		</p>
+		
+		<p>
+			<%=f.password_field :password, class: "form-control shadow", placeholder: "Password" %>
+		</p>
+
+		<p>
+			<%=f.submit(@user.new_record? ? "Signup" : "Update Accout", class:"btn btn-light btn-lg") %>
+		</p>
+
+
+		<% end %>
+	</div>
+</div>
+
+<p style = "text-align: center"><%=link_to 'Canel and Return Home', articles_path, class: "text-info"%></p>

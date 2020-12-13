@@ -1,0 +1,23 @@
+<h1 class = "text-center mt-4"> Log in </h1>
+
+<%= form_with(scope: :session, url: login_path, local: true) do |f| %>
+<div class = "container p-3 mb-2 bg-secondary text-white col-8 shadow" id ="form-container">
+	<div class = "form group text-center ">
+		<p> 
+			<%= f.text_field :email, class: "form-control shadow", placeholder: "Enter your Username" %>
+		</p>
+		
+		<p>
+			<%=f.password_field :password, class: "form-control shadow", placeholder: "Enter your Password" %>
+		</p>
+
+		<p>
+			<%=f.submit "Login", class: "btn btn-light btn-lg" %>
+		</p>
+
+
+		<% end %>
+	</div>
+</div>
+
+<p style = "text-align: center"><%=link_to 'Canel and Return Home', articles_path, class: "text-info"%></p>

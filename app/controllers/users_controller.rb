@@ -35,6 +35,10 @@ class UsersController < ApplicationController
 		@articles = @user.articles.paginate(page: params[:page], per_page: 3)
 	end
 
+	def login
+	end
+	
+
 	private
 
 		def set_user
