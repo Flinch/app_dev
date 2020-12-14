@@ -3,7 +3,7 @@ class SessionsController < ApplicationController
 	end
 
 	def create
-		user = User.find_by(email: params[:session][:username].downcase)
+		user = User.find_by(email: params[:session][:email].downcase)
 		if user && user.authenticate(params[:session][:password])
 			session[:user_id] = user.id 
 			flash[:alert] = "Logged in successfully"
@@ -18,7 +18,6 @@ class SessionsController < ApplicationController
 		session[:user_id] = nil
 		flash[:alert] = "Logged Out"
 		redirect_to root_path
-
 	end
 
 end
