@@ -1,7 +1,7 @@
 @import 'bootstrap/dist/css/bootstrap';
 
 .navbar {
-background-color: black !important;
+background-color: #343A40 !important;
 }
 
 #home-container {
@@ -33,20 +33,56 @@ body {
 
 #page-content {
   flex: 1 0 auto;
-  background-color: lightslategrey;
+  background-color: #94618E;
 }
 
 #sticky-footer {
   flex-shrink: none;
 }
 
-#form-container{
-	border-radius: 15px
+#form-container-login{
+	border-radius: 15px;
+  padding-top: 50px !important;
+  padding-bottom: 90px !important;
+  padding-left: 50px !important;
+  padding-right: 50px !important;
+  position: relative;
+}
+
+#form-container-signup{
+  border-radius: 15px;
+  padding-top: 80px !important;
+  padding-bottom: 100px !important;
+  padding-left: 50px !important;
+  padding-right: 50px !important;
+  position: relative;
 }
 
 .error_{
 	background-color: lightgrey;
 }
+
+.text-on-white{
+  color: #94618E !important
+}
+
+.btn-outline-success {
+    color: #94618E !important;
+    background-color: white;
+    border-color: #94618E; /*set the color you want here*/
+}
+
+.btn-outline-success:hover, .btn-success:focus, .btn-success:active, .btn-success.active {
+    color: white !important;
+    background-color: #94618E;
+    border-color: #94618E; /*set the color you want here*/
+}
+
+.login_signup_button{
+  position: relative;
+  top: 90px;
+}
+
 
 .digg_pagination {
   background: white;

@@ -1,6 +1,6 @@
 <%= form_with(model: @article, local: true) do |f| %>
 <%= render 'pages/shared/errors', obj: @article %>
-<div class = "container p-3 mb-2 bg-secondary text-white col-8 shadow" id ="form-container">
+<div class = "container pt-5 pl-5 pr-5 pb-3 mb-2 bg-light text-white col-7 shadow" id ="form-container">
 	<div class = "form group text-center ">
 		<p> 
 			<%= f.text_field :title, class: "form-control shadow" %>
@@ -11,7 +11,7 @@
 		</p>
 
 		<p>
-			<%=f.submit class:"btn btn-light btn-lg" %>
+			<%=f.submit class:"btn btn-outline-success btn-md" %>
 		</p>
 
 

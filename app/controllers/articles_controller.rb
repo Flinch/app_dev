@@ -1,5 +1,7 @@
 class ArticlesController < ApplicationController
 	before_action :set_article, only: [:show, :edit, :update, :destroy]
+	before_action :require_user, except: [:index, :show]
+	before_action :require_same_user, only: [:edit, :update]
 
 	def show
 	end
@@ -14,10 +16,10 @@ class ArticlesController < ApplicationController
 
 	def create
 		@article = Article.new(article_param)
-		@article.user = User.first
+		@article.user = current_user
 		if @article.save
 			flash[:notice] = "Article was created successfully."
-			redirect_to @article
+			redirect_to current_user
 		else
 			render "new"
 		end
@@ -51,4 +53,12 @@ class ArticlesController < ApplicationController
 		def article_param
 			params.require(:article).permit(:title, :description)
 		end
+
+		def require_same_user
+			if current_user != @article.user
+				flash[:alert] = "You need to be logged in to your own profile to perform this action"
+				redirect_to @article
+			end
+		end
+
 end

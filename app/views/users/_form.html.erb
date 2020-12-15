@@ -1,7 +1,7 @@
 <%= form_with(model: @user, local: true) do |f| %>
 <%= render 'pages/shared/errors', obj: @user %>
-<div class = "container p-3 mb-2 bg-secondary text-white col-8 shadow" id ="form-container">
-	<div class = "form group text-center ">
+<div class = "container p-3 mb-2 bg-light text-white col-6 shadow" id ="form-container-signup">
+	<div class = "form group text-center">
 		<p> 
 			<%= f.text_field :username, class: "form-control shadow", placeholder: "Username" %>
 		</p>
@@ -15,7 +15,7 @@
 		</p>
 
 		<p>
-			<%=f.submit(@user.new_record? ? "Signup" : "Update Accout", class:"btn btn-light btn-lg") %>
+			<%=f.submit(@user.new_record? ? "Signup" : "Update Accout", class:"btn btn-outline-success btn-lg login_signup_button") %>
 		</p>
 
 

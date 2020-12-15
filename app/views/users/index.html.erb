@@ -4,17 +4,19 @@
 	    <div class="row justify-content-md-center">
 	      <div class="col-8 mt-4">
 	        <div class="card text-center shadow mb-5 bg-white rounded" style = "border-color: #6c757d;">
-	          <div class="card-header font-italic bg-secondary text-white ">
+	          <div class="card-header font-italic bg-light">
 	          	<%=user.username%>
 	          </div>
 	          <div class="card-body">
 	          	<img src="https://cdn.pixabay.com/photo/2016/08/20/05/51/avatar-1606939_1280.png" width = "150px" height= "150px" alt="" class="rounded">
 	            <p class="card-text pt-2"><%= pluralize(user.articles.count, "Article") %></p>
 	            <%= link_to "View Profile", user_path(user), class: "btn btn-outline-success" %>
-	            <%= link_to "Edit Profile", edit_user_path(user), class: "btn btn-outline-info" %>
+	            <% if (is_logged_in) && (user == current_user) %>
+	            <%= link_to "Edit Profile", edit_user_path(user), class: "btn btn-outline-success" %>
+	            <%end%>
 	          </div>
-	          <div class="card-footer bg-secondary text-muted">
-	            <small class = "text-white">Joined <%= time_ago_in_words(user.created_at) %> ago</small>
+	          <div class="card-footer bg-light text-muted">
+	            <small class = "text-muted">Joined <%= time_ago_in_words(user.created_at) %> ago</small>
 	          </div>
 	        </div>
 	      </div>
