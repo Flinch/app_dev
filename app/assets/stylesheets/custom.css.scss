@@ -83,6 +83,13 @@ body {
   top: 90px;
 }
 
+.dropdown-menu{
+  margin-top: 8px !important;
+}
+
+.dropdown-toggle::after{
+  vertical-align: 2px !important;
+}
 
 .digg_pagination {
   background: white;
