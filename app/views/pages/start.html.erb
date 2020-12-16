@@ -1,8 +1,14 @@
+ <%= javascript_pack_tag 'custom.js' %>
+
     <div class = home-background>
     <div class = "container">
-      <div class="text-center" style = "background-attachment: fixed;">
-        <h2 class="text-on-white" style = "padding-top:15px;">Why waste paper?</h2>
-      </br><p><%= link_to "Sign up", signup_path, class: "mt-1 sign-up-button btn btn-outline-success btn-lg"%></p>
+      <div class="text-center" style = "background-attachment: fixed;">  
+        <h1>
+          <a href="" style = "font-family:courier" class="mt-1 typewrite text-on-white" data-period="2000" data-type='[ "Why waste paper?", "Sign up for free!" ]'>
+            <span class="wrap"></span>
+          </a>
+        </h1>
+    <p><%= link_to "Sign up", signup_path, class: "mt-1 btn btn-outline-success btn-md"%></p>
       </div>
     </div>  
 </div>
