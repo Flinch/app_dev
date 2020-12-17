@@ -11,9 +11,14 @@
 	          	<img src="https://cdn.pixabay.com/photo/2016/08/20/05/51/avatar-1606939_1280.png" width = "150px" height= "150px" alt="" class="rounded">
 	            <p class="card-text pt-2"><%= pluralize(user.articles.count, "Article") %></p>
 	            <%= link_to "View Profile", user_path(user), class: "btn btn-outline-success" %>
-	            <% if (is_logged_in) && (user == current_user) %>
-	            <%= link_to "Edit Profile", edit_user_path(user), class: "btn btn-outline-success" %>
-	            <%end%>
+	            <% if (is_logged_in) %>
+	            	<% if user == current_user%>
+	           			 <%= link_to "Edit Profile", edit_user_path(user), class: "btn btn-outline-success" %>
+	            	<%end%>
+	            	<% if current_user.admin? %>
+	            	 	<%=link_to 'Delete Profile', user_path(user), class: "btn btn-outline-success", method: :delete, data:{confirm: "Are you sure?"}%>
+	            	<%end%>
+	            <%end%>	
 	          </div>
 	          <div class="card-footer bg-light text-muted">
 	            <small class = "text-muted">Joined <%= time_ago_in_words(user.created_at) %> ago</small>

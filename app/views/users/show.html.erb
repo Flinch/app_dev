@@ -1,6 +1,6 @@
 <div class = "pt-4 text-center">
 	<img src="https://cdn.pixabay.com/photo/2016/08/20/05/51/avatar-1606939_1280.png" width = "200px" height= "200px" alt="<%=@user.username %>" class="rounded"></br>
-	<%=link_to "Edit your profile", edit_user_path(@user), class: "btn btn-outline-info mt-3" if (is_logged_in) && (@user == current_user) %>
+	<%=link_to "Edit your profile", edit_user_path(@user), class: "btn btn-outline-info mt-3" if (is_logged_in) && (@user == current_user) || current_user.admin? %>
 	<h2 class = "text-center mt-4"> <%= @user.username %>'s Articles</h2>
 </div>
 <%= render 'articles/article' %>

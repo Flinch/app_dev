@@ -1,3 +1,5 @@
+/* Refrenced from https://css-tricks.com/snippets/css/typewriter-effect/ */
+
 var TxtType = function(el, toRotate, period) {
         this.toRotate = toRotate;
         this.el = el;
