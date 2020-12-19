@@ -50,8 +50,6 @@ class UsersController < ApplicationController
 		redirect_to articles_path
 	end
 
-	
-
 	private
 
 		def set_user

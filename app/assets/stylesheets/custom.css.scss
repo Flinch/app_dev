@@ -114,6 +114,18 @@ h1{
   line-height: 1.5em !important
 }
 
+.alert{
+  margin-bottom: 0px;
+}
+
+.error{
+  background-color: red;
+}
+
+.success{
+  background-color: green;
+}
+
 .digg_pagination {
   background: white;
   cursor: default;
