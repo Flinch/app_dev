@@ -1,0 +1,28 @@
+  <h1 class = "text-center mt-4 text-on-grape"> Categories </h1>
+	  <div class="container">
+		  <% @categories.each do |category| %>
+		    <div class="row justify-content-md-center">
+		      <div class="col-6 mt-4">
+		        <div class="card text-center shadow mb-5 bg-white rounded" style = "border-color: #6c757d;">
+		          <div class="card-header font-italic bg-light text-muted">
+		            by
+		          </div>
+		          <div class="card-body">
+		            <h5 class="card-title"><%= link_to category.name, category_path(category), class: "text-on-white" %></h5>
+		          </div>
+		          <div class="card-footer bg-light text-muted">
+		            <small>Created <%= time_ago_in_words(category.created_at) %> ago, 
+		            edited <%= time_ago_in_words(category.updated_at) %> ago</small>
+		          </div>
+		        </div>
+		      </div>
+		    </div>
+		  <% end %>
+		  </div>
+		</div>  	
+		
+<div id = "page-content">
+	<div class = "apple_pagination">
+		<%= will_paginate @categories, :container => false  %>
+	</div>
+</div>
