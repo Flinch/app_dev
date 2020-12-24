@@ -1,0 +1,23 @@
+<h1 class = "text-center mt-4 text-dark"> Create New Category </h1>
+<%= form_with(model: @category, local: true) do |f| %>
+<%= render 'pages/shared/errors', obj: @category %>
+<div class = "container p-3 mb-2 bg-light text-white col-6 shadow" id ="form-container-signup">
+	<div class = "form group text-center">
+		<p> 
+			<%= f.text_field :name, class: "form-control shadow", placeholder: "Enter Category Name" %>
+		</p>
+
+		<p>
+			<%=f.submit class:"btn btn-outline-success btn-lg login_signup_button" %>
+		</p>
+		<% end %>
+	</div>
+</div>
+
+<p style = "text-align: center">
+	<% if is_logged_in %>
+		<%=link_to 'Canel and Return Home', articles_path, class: "text-on-grape"%>
+	<% else %>
+		<%=link_to 'Canel and Return Home', root_path, class: "text-on-grape"%>
+	<% end %>
+</p>
