@@ -29,6 +29,11 @@ class CategoriesControllerTest < ActionDispatch::IntegrationTest
     assert_response :success
   end
 
+  test "should not create category if not admin" do
+    get category_url(@category)
+    assert_response :success
+  end
+
   # test "should get edit" do
   #   get edit_category_url(@category)
   #   assert_response :success

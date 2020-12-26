@@ -33,6 +33,11 @@
                <%=link_to 'View Your Profile', current_user, class: "dropdown-item"%>
                <% end %>
           </li>
+
+            <li class="nav-item">
+            <%=link_to 'Categories', categories_path, class: "nav-link"%>
+          </li>
+
         </ul>
 
         <ul class="navbar-nav ml-auto">
@@ -45,6 +50,7 @@
                       <%=link_to 'Delete', user_path(current_user), class: "dropdown-item", method: :delete, data:{confirm: "Are you sure?"}%>
                     </div>
              </li>
+
 
              <%else%>
                 <li class="nav-item">
