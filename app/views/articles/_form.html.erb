@@ -11,6 +11,14 @@
 		</p>
 
 		<p>
+			<%= f.collection_check_boxes :category_ids, Category.all, :id, :name do |b|%>
+				 <%= b.label class:"text-on-white p-1" do%>
+	         	 	<%=b.check_box + " " + b.text%>
+	        	 <%end%>
+    		<% end %>
+		</p>
+
+		<p>
 			<%=f.submit class:"btn btn-outline-success btn-md" %>
 		</p>
 
