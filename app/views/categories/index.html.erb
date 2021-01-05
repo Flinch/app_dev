@@ -9,6 +9,10 @@
 		          </div>
 		          <div class="card-body">
 		            <h5 class="card-title"><%= link_to category.name, category_path(category), class: "text-on-white" %></h5>
+
+		             <div class = 'row justify-content-center'>
+			           		<div class = <%="#{category_icon_select(category.name)}-icon"%> > </div>
+	       			 </div>
 		          </div>
 		          <div class="card-footer bg-light text-muted">
 		            <small>Created <%= time_ago_in_words(category.created_at) %> ago, 

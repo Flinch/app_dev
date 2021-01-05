@@ -5,7 +5,14 @@
 			          <div class="card-header font-italic bg-light text-muted">
 			            by <%=@article.user.username%> 
 			          </div>
-			          <div class="card-body">
+
+			           <div class = 'row justify-content-center mt-2'>
+				            <%@article.categories.each do |category|%>
+				           	<div class = <%="#{category_icon_select(category.name)}-icon"%> > </div>
+				            <%end%>
+	        			</div>
+
+			          <div class="card-body show-pad">
 			            <div class="card-text"><%= simple_format(@article.description) %></div>
 			            <% if (is_logged_in) && ((@article.user == current_user) || current_user.admin?)  %>
 			            <%= link_to "Edit", edit_article_path(@article), class: "btn btn-outline-success" %>

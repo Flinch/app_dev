@@ -35,6 +35,40 @@ background-color: #343A40 !important;
   height:100%;
 }
 
+div.food-icon{
+  content:url(image_path('icons/food-icon.png'));
+  width:25px;
+  height:25px;
+}
+
+
+div.medicine-icon{
+  content:url(image_path('icons/medicine-icon.png'));
+  width:25px;
+  height:25px;
+}
+
+
+div.travel-icon{
+  content:url(image_path('icons/travel-icon.png'));
+  width:25px;
+  height:25px;
+}
+
+
+div.sports-icon{
+  content:url(image_path('icons/sports-icon.png'));
+  width:25px;
+  height:25px;
+}
+
+
+div.music-icon{
+   content:url(image_path('icons/music-icon.png'));
+  width:25px;
+  height:25px;
+}
+
 html,
 body {
   height: 100%;
@@ -108,6 +142,10 @@ body {
   position: absolute;
   margin-left:-43px !important;
   bottom:70px;
+}
+
+.show-pad{
+  padding:0.8rem! important;
 }
 
 h1{

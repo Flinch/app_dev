@@ -9,9 +9,11 @@
 	          <div class="card-body">
 	            <h5 class="card-title"><%= link_to article.title, article_path(article), class: "text-on-white" %></h5>
 	           
+	     	<div class = 'row justify-content-center'>
 	            <%article.categories.each do |category|%>
-	            <p><%=category.name%></p>
+	           		<div class = <%="#{category_icon_select(category.name)}-icon"%> > </div>
 	            <%end%>
+	        </div>
 
 	            <p class="card-text"><%= simple_format(truncate(article.description, length: 100)) %></p>
 	            
