@@ -69,6 +69,12 @@ div.music-icon{
   height:25px;
 }
 
+div.avatar-icon{
+  content:url(image_path('icons/avatar.png'));
+  width:50px;
+  height:50px;
+}
+
 html,
 body {
   height: 100%;
@@ -167,6 +173,39 @@ h1{
 .icon-placement{
   display:flex;
   margin-left: auto;
+}
+
+.comments-container{
+  margin-left: 10px;
+}
+
+.delete-margin{
+  position: absolute;
+  right: 10px;
+  top: 30px;
+}
+
+.comment-content{
+  padding-left: 10px;
+  max-width: 400px;
+}
+
+.comment-input-box
+{
+  cursor: text;
+  padding-bottom: 4px;
+  border-bottom: 1px solid var(--yt-spec-10-percent-layer);
+  flex: 1;
+  flex-basis: 1e-9px;
+}
+
+p{
+  margin-bottom: 0.5rem;
+}
+
+h5{
+  margin-bottom: 0px;
+  font-size: 1.15rem;
 }
 
 

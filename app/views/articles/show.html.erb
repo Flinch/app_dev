@@ -28,4 +28,6 @@
 			    </div>
 			    <p style = "text-align: center"><%=link_to 'Back', articles_path, class: "mb-2 text-on-grape"%></p>
 
+	<h2 class = "text-on-grape" style = "margin-left:10px">Leave a Comment </h2>		    
 			    <%= render 'comments/form' %>
+			    <%= render 'comments/comment_view', :comment => @comments, :article => @article%>
