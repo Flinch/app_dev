@@ -19,7 +19,7 @@
 		</p>
 
 		<p>
-			<%=f.submit "Update Note", class:"btn btn-outline-success btn-md" %>
+			<%=f.submit(@article.new_record? ? "Create Note" : "Update Note", class:"btn btn-outline-success btn-md") %>
 		</p>
 
 
