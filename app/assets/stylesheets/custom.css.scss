@@ -194,7 +194,7 @@ h1{
 
 .comment-content{
   padding-left: 10px;
-  max-width: 390px;
+  max-width: 360px;
 }
 
 textarea {
@@ -213,6 +213,7 @@ textarea:focus {
   background-color: transparent;
   border-width: 0px 0px 0.25px 0px;
   border-color: grey;
+  padding: 0px;
 }
 
 p{
