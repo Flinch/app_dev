@@ -75,6 +75,12 @@ div.avatar-icon{
   height:50px;
 }
 
+div.avatar-profile{
+  content:url(image_path('icons/avatar.png'));
+  width:200px;
+  height:200px;
+}
+
 html,
 body {
   height: 100%;
