@@ -177,6 +177,7 @@ h1{
 
 .comments-container{
   margin-left: 10px;
+  max-width:487px;
 }
 
 .delete-margin{
@@ -185,18 +186,33 @@ h1{
   top: 30px;
 }
 
+.comment-card
+{
+  background-color: transparent !important;
+  border-width: 0px 0px 1px 0px;
+}
+
 .comment-content{
   padding-left: 10px;
-  max-width: 400px;
+  max-width: 390px;
+}
+
+textarea {
+  height: 30px;
+}
+
+textarea:focus {
+    outline: none !important;
+    border-bottom:1px solid black;
+    /*background-color: white;*/
 }
 
 .comment-input-box
 {
   cursor: text;
-  padding-bottom: 4px;
-  border-bottom: 1px solid var(--yt-spec-10-percent-layer);
-  flex: 1;
-  flex-basis: 1e-9px;
+  background-color: transparent;
+  border-width: 0px 0px 0.25px 0px;
+  border-color: grey;
 }
 
 p{

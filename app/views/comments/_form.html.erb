@@ -1,12 +1,10 @@
 <%= form_with(model: @comment, local: true) do |f| %>
-<!-- <div class = "container pt-5 pl-5 pr-5 pb-3 mb-2 bg-light text-white col-7 shadow" id ="form-container"> -->
 	<div class = "comments-container form group">
 		<p>
-			<%=f.text_area :description, rows:2, class: "col-5 comment-input-box shadow" %>
+			<%=f.text_area :description, rows:2, class: "col-12 comment-input-box" %>
 		</p>
-		<p>
-			<%=f.submit class:"btn btn-outline-success btn-md" %>
+		<p class = "text-right">
+			<%=f.submit class:"btn btn-info btn-sm" %>
 		</p>
 		<% end %>
 	</div>
-<!-- </div> -->

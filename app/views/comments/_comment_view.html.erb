@@ -2,10 +2,8 @@
 	  <% @comments.each do |comment| %>
 	  	<% if (comment.article_id == @article.id) %>
 		    <div class="row">
-		      <div class="col-5 mt-4">
-		        <div class="card shadow mb-3 bg-white rounded">
-		        	 <div class="card-header font-italic bg-light text-muted">
-			          </div>
+		      <div class="col-12 mt-4">
+		        <div class="card mb-3 comment-card rounded">
 		          <div class="card-body row pb-0 ">
 		          	<div class = "avatar-icon"> </div>
 		          	<div class = "comment-content">
@@ -15,9 +13,6 @@
 			        <% if (is_logged_in) && (current_user.id == comment.user_id || current_user.admin?) %>
 			        <%= link_to "Delete", comment_path(comment), class: "delete-margin mb-4 btn btn-outline-danger btn-sm", method: :delete, data: {confirm: "Are you sure?"} %>
 			        <%end%>
-		          </div>
-		          <div class="p-0 pr-1 card-footer bg-light text-muted text-right">
-		          	<small> <%= time_ago_in_words(comment.created_at) %> ago </small>
 		          </div>
 		        </div>
 		      </div>
