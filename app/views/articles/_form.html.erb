@@ -3,11 +3,11 @@
 <div class = "container pt-5 pl-5 pr-5 pb-3 mb-2 bg-light text-white col-7 shadow" id ="form-container">
 	<div class = "form group text-center ">
 		<p> 
-			<%= f.text_field :title, class: "form-control shadow" %>
+			<%= f.text_field :title, class: "form-control shadow", placeholder: "Enter a title" %>
 		</p>
 
 		<p>
-			<%=f.text_area :description, rows:8, class: "form-control shadow" %>
+			<%=f.text_area :description, rows:8, class: "form-control shadow", placeholder: "Enter your note"  %>
 		</p>
 
 		<p>
@@ -19,7 +19,7 @@
 		</p>
 
 		<p>
-			<%=f.submit class:"btn btn-outline-success btn-md" %>
+			<%=f.submit "Update Note", class:"btn btn-outline-success btn-md" %>
 		</p>
 
 
@@ -27,4 +27,4 @@
 	</div>
 </div>
 
-<p style = "text-align: center"><%=link_to 'Canel and Return Home', articles_path, class: "text-info"%></p>
+<p style = "text-align: center"><%=link_to 'Canel and Return Home', articles_path, class: "text-on-grape"%></p>

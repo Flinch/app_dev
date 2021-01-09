@@ -3,15 +3,15 @@
 	  	<% if (comment.article_id == @article.id) %>
 		    <div class="row">
 		      <div class="col-12 mt-4">
-		        <div class="card mb-3 comment-card rounded">
+		        <div class="card mb-3 comment-card">
 		          <div class="card-body row pb-0 ">
 		          	<div class = "avatar-icon"> </div>
 		          	<div class = "comment-content">
-			          	<h5> <%=User.find(comment.user_id).username%> </h5>
-			            <p> <%= comment.description %> </p>
+			          	<h5 class = "text-on-grape"> <%=User.find(comment.user_id).username%> </h5>
+			            <p class = "text-on-grape"> <%= comment.description %> </p>
 			        </div>
 			        <% if (is_logged_in) && (current_user.id == comment.user_id || current_user.admin?) %>
-			        <%= link_to "Delete", comment_path(comment), class: "delete-margin mb-4 btn btn-outline-danger btn-sm", method: :delete, data: {confirm: "Are you sure?"} %>
+			        <%= link_to "Delete", comment_path(comment), class: "delete-margin mb-4 btn btn-danger btn-sm", method: :delete, data: {confirm: "Are you sure?"} %>
 			        <%end%>
 		          </div>
 		        </div>

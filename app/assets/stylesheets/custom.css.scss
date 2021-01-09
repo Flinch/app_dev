@@ -78,6 +78,7 @@ div.avatar-icon{
 html,
 body {
   height: 100%;
+  font-family: 'Cormorant Garamond', serif;
 }
 
 #page-content {
@@ -116,7 +117,7 @@ body {
 }
 
 .text-on-grape{
-  color: #343A40;
+  color: whitesmoke;
 }
 
 .btn-outline-success {
@@ -125,7 +126,7 @@ body {
     border-color: #94618E; /*set the color you want here*/
 }
 
-.btn-outline-success:hover, .btn-outline-success:focus, .btn-outline-success:active, .btn-outline-success.active, {
+.btn-outline-success:hover, .btn-outline-success:focus, .btn-outline-success:active, {
     color: white !important;
     background-color: #94618E;
     border-color: #94618E; /*set the color you want here*/
@@ -190,6 +191,8 @@ h1{
 {
   background-color: transparent !important;
   border-width: 0px 0px 1px 0px;
+  border-radius: 0px;
+  padding-bottom: 5px;
 }
 
 .comment-content{
@@ -212,9 +215,11 @@ textarea:focus {
   cursor: text;
   background-color: transparent;
   border-width: 0px 0px 0.25px 0px;
-  border-color: grey;
   padding: 0px;
+  color: whitesmoke;
+  border-color: #524040;
 }
+
 
 p{
   margin-bottom: 0.5rem;
@@ -285,7 +290,7 @@ h5{
   .apple_pagination .current {
     font-style: normal;
     font-weight: bold;
-    background-color: #bebebe;
+    background-color: whitesmoke;
     display: inline-block;
     width: 1.4em;
     height: 1.4em;
@@ -299,7 +304,7 @@ h5{
     color: black; }
     .apple_pagination a:hover, .apple_pagination a:focus {
       text-decoration: underline;
-      background-color: #bebebe;
+      background-color: none;
   	  width: 1.4em;
       height: 1.4em;
   	  border-radius: 2em;}
