@@ -17,7 +17,6 @@ class CommentsController < ApplicationController
       @article = Article.find(@comment.article_id)
       @comment.destroy
       redirect_to article_path(@article)
-
 	end
 
 
@@ -33,7 +32,6 @@ class CommentsController < ApplicationController
 			flash[:error] = "Error saving comment"
 			redirect_to article_path(@article)
 		end
-
 	end
 
 	private 
